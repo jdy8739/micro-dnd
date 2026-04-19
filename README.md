@@ -34,6 +34,29 @@ We provide the logic; you provide the soul. `micro-dnd` is framework-agnostic an
 
 ---
 
+## 🏗️ Architecture
+
+`micro-dnd` uses a monorepo structure to maintain a framework-agnostic core while providing thin, optimized wrappers.
+
+### 1. `@micro-dnd/core` (The Engine)
+- **Role**: Tracking pointer events and calculating coordinates.
+- **Size**: Target < 2KB (Gzipped).
+- **Stack**: Pure TypeScript, zero dependencies.
+- **Key Logic**:
+  - Single event listener based on the Pointer Events API.
+  - Ultralight hit-testing using `document.elementFromPoint`.
+  - State updates throttled by `requestAnimationFrame`.
+
+### 2. `@micro-dnd/react` (The Adapter)
+- **Role**: Binding the Core state to the React lifecycle.
+- **Size**: Target < 1KB (Gzipped).
+- **Interface**: Provides the `useMicroSort` hook.
+- **Key Logic**:
+  - State synchronization via `useSyncExternalStore`.
+  - Direct DOM access via refs for high-performance style injection.
+
+---
+
 ## 🚀 Roadmap
 
 - **Phase 1: The Engine** – Pointer tracking & sub-millisecond hit testing.
