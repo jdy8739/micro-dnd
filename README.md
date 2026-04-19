@@ -34,6 +34,15 @@ We provide the logic; you provide the soul. `micro-dnd` is framework-agnostic an
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Package Manager**: `pnpm` for efficient workspace management.
+- **Build Tool**: `tsup` for lightning-fast bundling (CJS, ESM, and DTS).
+- **Core**: Pure TypeScript with zero runtime dependencies.
+- **Adapter**: React (using `useSyncExternalStore` for performance).
+
+---
+
 ## 🏗️ Architecture
 
 `micro-dnd` uses a monorepo structure to maintain a framework-agnostic core while providing thin, optimized wrappers.

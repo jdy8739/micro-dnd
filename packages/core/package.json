@@ -1,0 +1,17 @@
+{
+  "name": "@micro-dnd/core",
+  "version": "0.1.0",
+  "description": "The math-driven drag-and-drop engine",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "test": "vitest run",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": ["dnd", "drag and drop", "sortable", "zero-reflow"],
+  "license": "MIT"
+}
