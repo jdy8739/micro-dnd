@@ -18,6 +18,9 @@
   "dependencies": {
     "@micro-dnd/core": "workspace:*"
   },
+  "devDependencies": {
+    "@types/react": "^19.2.2"
+  },
   "keywords": ["react", "dnd", "drag and drop", "sortable", "zero-reflow"],
   "license": "MIT"
 }
