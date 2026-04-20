@@ -5,6 +5,7 @@
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm -r dev",
+    "dev:playground": "pnpm --filter @micro-dnd/playground dev",
     "test": "pnpm -r test",
     "type-check": "pnpm -r type-check"
   },
